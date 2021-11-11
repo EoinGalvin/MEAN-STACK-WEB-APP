@@ -1,0 +1,10 @@
+include layout
+each game in games
+    .card 
+        .card-block 
+            h4 
+                a(href="/games/" +game._id)= game.name
+            p.ageRating= game.ageRating
+            p.rating= game.rating
+            p.availability= game.availability
+            p.price= game.price

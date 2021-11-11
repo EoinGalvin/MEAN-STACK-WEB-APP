@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(160, 224, 233);
+  margin: 0px;
+  padding: 0px;
+}
+
+
+#navbar {
+  width:100%;
+  font-size: 12px;
+  font-family: "JetBrains Mono";
+  overflow: hidden;
+  top: 0;
+  }
+  h1{
+  float: left;
+  margin: auto;
+  padding-top:1%;
+  padding-bottom: 1%;
+  font-size: 30px;
+  }
+  .header {
+  position: sticky;
+  position: -webkit-sticky;
+  background-color: #4328a1;
+  color: white;
+  float: left;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  }
+  #navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 10px 3% 5px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color:#5d5bc9;
+  }
+  #navbar a:hover {
+  background-color: #E8F7EE;
+  color: black;
+  }
+  
+  .card {
+    background-color: #c0baf5;
+    border: 1px black solid;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .card-primary {
+    border-color: #000000;
+    margin-bottom: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+  }
+
+  p {
+    color: black
+  }
