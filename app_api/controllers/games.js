@@ -13,6 +13,16 @@ const getGamesList = function(req,res){
     });
 };
 
+const getGamesListOrderedPrice  = function(req,res){
+    Game.find({}).sort('price').exec(function(err,result){
+        if(err) {
+            console.log(err);
+        }else{
+            res.json(result);
+        }
+    });
+};
+
 const getSingleGame = function(req,res){
     Game
         .findById(req.params.gameid)
@@ -38,14 +48,14 @@ const getSingleGame = function(req,res){
 
 const addGameToCollection = function(req,res) { 
 
-    if(req.body.name != '' && req.body.ageRating != '' && req.body.availability != '' && req.body.rating != null && req.body.price != '')
+    if(req.body.name != '' && req.body.ageRating != '' && req.body.availability != '' && req.body.rating != null && req.body.price != '' && req.body.url != '')
     {
     var newGame = Game({
         name: req.body.name,
         ageRating: req.body.ageRating,
         rating: req.body.rating,
         availability: req.body.availability,
-        price: req.body.price
+        price: req.body.price,
       });
       console.log(newGame);
       newGame.save(function(err){
@@ -64,4 +74,5 @@ module.exports = {
     getGamesList,
     getSingleGame,
     addGameToCollection,
+    getGamesListOrderedPrice
 };

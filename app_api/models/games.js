@@ -12,7 +12,7 @@ rating: {
     max:10
 },
 availability: String,
-price: String 
+price: String
 },{versionKey: false
 });
 

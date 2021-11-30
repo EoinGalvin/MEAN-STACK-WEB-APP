@@ -1,7 +1,11 @@
-.card 
-        .card-block
-            h4.name= gamedata.name
-            p.ageRating= gamedata.ageRating
-            p.rating= gamedata.rating
-            p.availability= gamedata.availability
-            p.price= gamedata.price
+include layout
+.header
+    link(rel='stylesheet', href='/stylesheets/cards.css')
+.card(style='width: 18rem;')
+        img.card-img-top(src="/images/"+gamedata.name + ".png", alt=gamedata.name)
+        .card-body
+            p.card-text= gamedata.name
+            p.card-text="Price: $" + gamedata.price
+            p.card-text="Availability: " + gamedata.availability 
+            p.card-text="Age Rating: " + gamedata.ageRating 
+            p.card-text="Rating: " + gamedata.rating

@@ -1,6 +1,7 @@
-
 doctype html
 include layout.pug
+.header
+  link(rel='stylesheet', href='/stylesheets/formStyle.css')
 head
   title  Admin
   meta(charset='utf-8')
@@ -26,6 +27,5 @@ form(method='POST')
   label(for='price')  Price
   br
   input#price(type='text' name='price')
-  br
   br
   input(type='submit', value='Submit')

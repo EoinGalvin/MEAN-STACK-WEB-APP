@@ -10,6 +10,9 @@ const GameAppCtrl = require('../../app_server/controllers/games');
 router.get('/gamedata',function(req,res){
     GameApiCtrl.getGamesList(req,res);
 });
+router.get('/gamedataordered',function(req,res){
+    GameApiCtrl.getGamesListOrderedPrice(req,res);
+});
 
 router.get('/gamedata/:gameid', function(req,res){
     GameApiCtrl.getSingleGame(req,res);

@@ -1,0 +1,29 @@
+    form{
+    margin-left:20%;
+    margin-right:20%;
+    padding-top:5%;
+    }
+    
+    input[type=text]:focus {
+      border: 3px solid #555;
+    }
+    
+    h2{
+      text-align:center;
+      color: white;
+    } 
+    label{
+      color:white;
+      
+      padding: 4px;
+    }
+
+    input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        
+      }

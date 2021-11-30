@@ -1,0 +1,29 @@
+    .card {
+      background-color: #c0baf5;
+      border: 1px black solid;
+      width: 30%;
+      height: 80%;
+      text-align: center;
+    }
+    
+    .card-primary {
+      border-color: #000000;
+      margin-bottom: 1rem;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lobster', cursive;
+    }
+
+    h4 {
+        margin:5%;
+        font-size: xx-large;
+    }
+  
+    p {
+      color: black;
+      font-size:larger;
+    }
+
+  
+    

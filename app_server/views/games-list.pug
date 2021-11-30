@@ -1,10 +1,14 @@
 include layout
-each game in games
-    .card 
-        .card-block 
-            h4 
-                a(href="/games/" +game._id)= game.name
-            p.ageRating= game.ageRating
-            p.rating= game.rating
-            p.availability= game.availability
-            p.price= game.price
+.header
+    link(rel='stylesheet', href='/stylesheets/cards.css')
+.centering
+    each game in games
+        .card(style='width: 18rem;')
+            img.card-img-top(src="/images/"+game.name + ".png", alt=game.name)
+            .card-body
+                a(href="/games/" + game._id)= game.name
+                p.card-text="Price: $" + game.price
+                p.card-text="Availability: " + game.availability 
+                p.card-text="Age Rating: " + game.ageRating 
+                p.card-text="Rating: " + game.rating
+            
