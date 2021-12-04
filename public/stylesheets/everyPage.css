@@ -10,13 +10,14 @@ body {
     font-family: "JetBrains Mono";
     overflow: hidden;
     margin-top:0%;
+    vertical-align: middle;
     }
     h1{
     float: left;
-    margin: auto;
-    padding-top:1%;
-    padding-bottom: 1%;
     font-size: 30px;
+    color:#41f087;
+    padding: auto;
+    
     }
     .header {
     position: sticky;
@@ -37,9 +38,11 @@ body {
     font-size: 17px;
     background-color:#41f087;
     height: 100%;
+    border-right: 2px solid black;
     
     }
     #navbar a:hover {
     background-color: #0ab950;
     color: black;
     }
+    

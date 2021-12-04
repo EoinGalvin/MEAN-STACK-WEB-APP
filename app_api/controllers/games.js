@@ -69,10 +69,17 @@ const addGameToCollection = function(req,res) {
     }
 };
 
+const orderGames = function(req,res){
+    if(req.body.checked = "on"){
+        getGamesListOrderedPrice(req,res);
+    }
+}
+
 
 module.exports = {
     getGamesList,
     getSingleGame,
     addGameToCollection,
-    getGamesListOrderedPrice
+    getGamesListOrderedPrice,
+    orderGames
 };

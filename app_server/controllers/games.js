@@ -13,8 +13,16 @@ const apiOptions = {
             res.render('games-list',{games: responseBody});
         };
 
-        const getGamesList = function(req,res){
-            const path = '/api/gameData';
+        const getGamesList = function(req,res,bool){
+            if(bool == true)
+            {
+                var path = '/api/gamedataordered';
+            }
+            else{
+                var path ='/api/gamedata';
+            }
+                
+            
             const requestOptions = {
                 url : apiOptions.server + path,
                 method : 'GET',
@@ -51,7 +59,8 @@ const apiOptions = {
             res.render('admin-AddGame');
         };
 
-
+          
+        
         module.exports = {
             renderGamesPage,
             getGamesList,

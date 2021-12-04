@@ -1,6 +1,11 @@
 include layout
+
 .header
     link(rel='stylesheet', href='/stylesheets/cards.css')
+form(method='post')
+  input#ordered(type='checkbox', name='ordered', value='on')
+  label(for='ordered') Order Games by Price 
+  input(type='submit') 
 .centering
     each game in games
         .card(style='width: 18rem;')
@@ -11,4 +16,3 @@ include layout
                 p.card-text="Availability: " + game.availability 
                 p.card-text="Age Rating: " + game.ageRating 
                 p.card-text="Rating: " + game.rating
-            

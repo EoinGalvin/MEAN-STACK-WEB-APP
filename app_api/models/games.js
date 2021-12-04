@@ -12,8 +12,8 @@ rating: {
     max:10
 },
 availability: String,
-price: String
-},{versionKey: false
+price: Number
+},{versionKey: false, collection : "games"
 });
 
 mongoose.model('Game',gamesSchema);

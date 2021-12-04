@@ -1,3 +1,19 @@
-include layout 
-
-p Login page
+doctype html
+include layout.pug
+.header
+  link(rel='stylesheet', href='/stylesheets/formStyle.css')
+head
+  title  Login
+  meta(charset='utf-8')
+h1 You are logged in as: #{userEmail}
+form(method='POST')
+  h2 Login
+  label(for='email')  Email
+  br
+  input#email(type='text' name='email')
+  br
+  label(for='password')  Password
+  br
+  input#password(type='text' name='password')
+  br
+  input(type='submit', value='Submit')
