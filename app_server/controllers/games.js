@@ -6,7 +6,7 @@ const apiOptions = {
     server : 'http://localhost:3000' 
     };
     if (process.env.NODE_ENV === 'production') { 
-        apiOptions.server = 'heroku link here'; //need to put heroku link here
+        apiOptions.server = 'https://glorifythegame.herokuapp.com/'; //need to put heroku link here
         };
 
         const renderGamesPage = function(req,res,responseBody){

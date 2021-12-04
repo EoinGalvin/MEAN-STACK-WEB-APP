@@ -36,7 +36,7 @@ router.get('/login',function(req,res){
 userCtrl.renderLogin(req,res);
 })
 /* POST user sign in email and password*/
-router.post('/login', function(req,res,next) {
+router.post('/login', function(req,res) {
   userApiCtrl.validateLogin(req,res);
   });
 
