@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const dbURI = "mongodb+srv://eoin123:eoin123@cluster0.jd1r2.mongodb.net/GlorifyTheGame?retryWrites=true&w=majority";
+let mongoose = require('mongoose');
+let dbURI = "mongodb+srv://eoin123:eoin123@cluster0.jd1r2.mongodb.net/GlorifyTheGame?retryWrites=true&w=majority";
 
 try {
    
