@@ -13,7 +13,7 @@ mongoose.connect(
   console.log("could not connect");
 }
 
-const dbConnection = mongoose.connection;
+/* const dbConnection = mongoose.connection;
     dbConnection.on("error", (err) => console.log(`Connection error ${err}`));
     dbConnection.once("open", () => console.log("Connected to DB!"));
   
@@ -34,7 +34,7 @@ const gracefulShutdown = (msg, callback) => {
     console.log(`Mongoose disconnected through ${msg}`);
     callback();
   });
-};
+}; */
 
 // For nodemon restarts                                 
 process.once('SIGUSR2', () => {
