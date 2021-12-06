@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 
 const GameApiCtrl = require('../controllers/games');
 const GameAppCtrl = require('../../app_server/controllers/games');
-
+const UserApiCtrl = require('../../app_api/controllers/users');
+const UserAppCtrl = require('../../app_server/controllers/users');
 /* Gets All game data from the database */
 router.get('/gamedata',function(req,res){
     GameApiCtrl.getGamesList(req,res);
@@ -27,5 +28,11 @@ router.post('/addgame', function(req,res) {
     GameApiCtrl.addGameToCollection(req,res);
     GameAppCtrl.displayAdmin(req,res);
     });
+
+router.post('/register',function(req,res){
+    UserApiCtrl.addUserToCollection(req,res);
+    UserAppCtrl.displayRegister(req,res);
+
+});
 
 module.exports = router;

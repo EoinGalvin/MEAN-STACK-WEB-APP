@@ -3,7 +3,8 @@ var router = express.Router();
 
 const mongoose = require('mongoose');
 const gameCtrl = require('../controllers/games');
-const userApiCtrl = require('../../app_api/controllers/users');
+const UserApiCtrl = require('../../app_api/controllers/users');
+const UserAppCtrl = require('../controllers/users');
 const userCtrl = require('../controllers/users');
 
 
@@ -34,13 +35,19 @@ userCtrl.renderLogin(req,res);
 })
 /* POST user sign in email and password*/
 router.post('/login', function(req,res) {
-  userApiCtrl.validateLogin(req,res);
+  UserApiCtrl.validateLogin(req,res);
   });
 
 /* get registration page */
 router.get('/register',function(req,res){
   res.render('register');
-})
+});
+
+router.post('/register',function(req,res){
+  UserApiCtrl.addUserToCollection(req,res);
+  UserAppCtrl.displayRegister(req,res);
+});
+
 
 /* get home page */
 router.get('/',function(req,res){

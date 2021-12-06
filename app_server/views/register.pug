@@ -1,3 +1,23 @@
-include layout 
-
-p Register page
+doctype html
+include layout.pug
+.header
+  link(rel='stylesheet', href='/stylesheets/formStyle.css')
+head
+  title  Register
+  meta(charset='utf-8')
+form(method='POST')
+  h2 Register
+  label(for='username') Username
+  br
+  input#username(type='text' name='username')
+  br
+  label(for='email')  Email
+  br
+  input#email(type='text' name='email')
+  br
+  label(for='password')  Password
+  br
+  input#password(type='text' name='password')
+  br
+  
+  input(type='submit', value='Submit')

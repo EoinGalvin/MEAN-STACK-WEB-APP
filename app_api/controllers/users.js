@@ -23,6 +23,28 @@ const validateLogin = function(req,res) {
     };
 }
 
+const addUserToCollection = function(req,res) { 
+
+    if(req.body.username != '' && req.body.email != '' && req.body.password != '')
+    {
+    var newUser = User({
+        username: req.body.username,
+        password: req.body.password,
+        email: req.body.email,
+      });
+      console.log(newUser);
+      newUser.save(function(err){
+        if(err) throw err;
+    
+        console.log('User added');
+      })
+    }
+    else{
+        console.log("invalid entry");
+    }
+};
+
 module.exports = {
-    validateLogin
+    validateLogin,
+    addUserToCollection
 };

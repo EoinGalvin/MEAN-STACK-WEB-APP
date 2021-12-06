@@ -8,7 +8,11 @@ const renderLoggedIn = function(req,res,email)
     
 }
 
+const displayRegister = function(req,res){
+    res.render('register');
+};
 module.exports = {
     renderLogin,
-    renderLoggedIn
+    renderLoggedIn,
+    displayRegister
 };
