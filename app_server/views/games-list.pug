@@ -4,7 +4,8 @@ include layout
     link(rel='stylesheet', href='/stylesheets/cards.css')
 form(method='post')
   input#ordered(type='checkbox', name='ordered', value='on')
-  label(for='ordered') Order Games by Price 
+  label(for='ordered') Order Games by Price
+  br
   input(type='submit') 
 .centering
     each game in games

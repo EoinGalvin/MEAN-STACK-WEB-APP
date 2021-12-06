@@ -13,11 +13,6 @@ mongoose.connect(
   console.log("could not connect");
 }
 
-/* const dbConnection = mongoose.connection;
-    dbConnection.on("error", (err) => console.log(`Connection error ${err}`));
-    dbConnection.once("open", () => console.log("Connected to DB!"));
-  
-    
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }
@@ -29,12 +24,13 @@ mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
+
 const gracefulShutdown = (msg, callback) => {
   mongoose.connection.close( () => {
     console.log(`Mongoose disconnected through ${msg}`);
     callback();
   });
-}; */
+}; 
 
 // For nodemon restarts                                 
 process.once('SIGUSR2', () => {
@@ -54,5 +50,6 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
+/* incorporate db models with db */
 require('./games');
 require('./users');

@@ -1,7 +1,4 @@
-const { response } = require('express');
-const apiBooks = require('../../app_api/controllers/games');
 const request = require('request');
-const { render } = require('../../app');
 const apiOptions = { 
     server : 'http://localhost:3000' 
     };

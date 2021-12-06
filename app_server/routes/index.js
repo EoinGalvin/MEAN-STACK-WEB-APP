@@ -2,15 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 const mongoose = require('mongoose');
-const Game = mongoose.model('Game');
-const User = mongoose.model('User');
-
 const gameCtrl = require('../controllers/games');
 const userApiCtrl = require('../../app_api/controllers/users');
 const userCtrl = require('../controllers/users');
 
 
-/* GET game page. */
+/* GET and display game page. */
 router.get('/games', function(req, res) {
   gameCtrl.getGamesList(req,res,false);
 });
@@ -49,9 +46,5 @@ router.get('/register',function(req,res){
 router.get('/',function(req,res){
   res.render('homepage');
 });
-
-
-
-
 
 module.exports = router;

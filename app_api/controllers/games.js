@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Game = mongoose.model('Game');
 
-const GameAppCtrl = require('../../app_server/controllers/games');
-
 const getGamesList = function(req,res){
     Game.find({},function(err,result){
         if(err) {
@@ -68,18 +66,9 @@ const addGameToCollection = function(req,res) {
         console.log("invalid entry");
     }
 };
-
-const orderGames = function(req,res){
-    if(req.body.checked = "on"){
-        getGamesListOrderedPrice(req,res);
-    }
-}
-
-
 module.exports = {
     getGamesList,
     getSingleGame,
     addGameToCollection,
     getGamesListOrderedPrice,
-    orderGames
 };

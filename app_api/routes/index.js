@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
 const mongoose = require('mongoose');
-const Game = mongoose.model('Game');
 
 const GameApiCtrl = require('../controllers/games');
 const GameAppCtrl = require('../../app_server/controllers/games');
@@ -20,11 +18,11 @@ router.get('/gamedata/:gameid', function(req,res){
     GameApiCtrl.getSingleGame(req,res);
 });
 
-/* Enter new Game to Database */
+/* gets the /api/addgame page and displays it */
 router.get('/addgame',function(req,res){
     GameAppCtrl.displayAdmin(req,res);
   });
-/* */
+/* Enter new Game to Database */
 router.post('/addgame', function(req,res) {
     GameApiCtrl.addGameToCollection(req,res);
     GameAppCtrl.displayAdmin(req,res);
