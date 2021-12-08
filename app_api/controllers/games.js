@@ -46,7 +46,7 @@ const getSingleGame = function(req,res){
 
 const addGameToCollection = function(req,res) { 
 
-    if(req.body.name != '' && req.body.ageRating != '' && req.body.availability != '' && req.body.rating != null && req.body.price != '' && req.body.url != '')
+    if(req.body.name != '' && req.body.ageRating != '' && req.body.availability != '' && req.body.rating != null && req.body.price != null)
     {
     var newGame = Game({
         name: req.body.name,
